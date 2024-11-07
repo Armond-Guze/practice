@@ -1,23 +1,20 @@
-import React, { useState } from "react";
+import React from 'react'
+import { useState } from 'react'
 
-const tasksArray = [{ name: "armond", complete: true }];
 const Headers = () => {
-  const [tasks, setTask] = useState(tasksArray);
+  const [tasks, setTasks] = useState()
 
   const toggleTask = (index) => {
-    const updatedTasks = tasks.map((task, i) => 
+    const updatedTasks = tasks.map((task, i) =>
       i === index ? { ...task, completed: !task.completed } : task
-  );
-    setTask(updatedTasks);
-  };
+    );
+    setTasks(updatedTasks)
+  }
 
-  return <div>{tasks.map((task, index) => (
-    <div key={index}>
-      {task.name}
-      {task.completed ? "Completed" : "Incomplete"}
-    </div>
-  ))}</div>;
-};
-// sdsd
+  return (
+    <div>Headers</div>
+  )
+  // sf
+}
 
-export default Headers;
+export default Headers
